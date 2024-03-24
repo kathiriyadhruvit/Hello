@@ -1,0 +1,184 @@
+<script type="text/javascript">
+	function mydata()
+	{
+		var n=document.getElementById('nm').value;
+		var add=document.getElementById('add').value;
+		var email=document.getElementById('email').value;
+		var pattern=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		var pass=document.getElementById('pass').value;
+		var phone=document.getElementById('number').value;
+		var date=document.getElementById('date').value;
+	
+		
+		
+	
+	 if (n=="")
+        {
+            alert("place enter name");
+            return false;
+        }
+        	if(pass=="")
+        {
+        	alert("please enter you password")
+            
+            return false;
+        }
+        	if(phone.length!=10)
+        {
+        	alert("please your mobile number");
+            
+            return false;
+        }
+        if (add=="")
+        {
+            alert("place enter address");
+            return false;
+        }
+        if(date=="")
+        {
+        	alert("please your enter date");
+        	return false;
+        }
+		   if(email=="")
+       	{
+       		alert("please your enter email");
+        		return false;
+       	}
+       	else{
+       		return true;
+       	}
+       	if(email!="")
+       	{
+       		if(pattern.value.match(email))
+       		{
+       			alert("please your check email");
+       			return false;
+       		}
+       		else
+       		{
+       			return true;
+       		}
+       		
+       	}
+       
+       
+        
+ 
+       	
+
+    }
+
+</script>
+<style type="text/css">
+	th{
+		color: blue;
+		font-size: 30px;
+
+	}
+	input[type=text]{
+		font-size: 30px;
+		border: 1px solid blue;
+		align-content: center;
+		padding: 2px;
+		border-radius: 5%;
+		color: blue;
+
+	}
+	h1{
+		color: antiquewhite;
+		background-color: blueviolet;
+		font-size: 40px;
+		font-style: normal;
+		animation-name: dhulo 2s linear gradient;
+	}
+	@keyframes dhulo{
+		0%{
+			color: red;
+			opacity: 1.9;
+			rotate: -360deg;;
+		}
+		25%{
+			color: black;
+			opacity: 1.5;
+		}
+	}
+h1:hover{
+		color: red;
+		height: 20px;
+
+	}
+	h2{
+		background-color: yellow;;
+		border: 2px green;
+		font-size: 30px;
+		border-radius: 34px;
+	}
+	th{
+		background-color: green;
+		color: black;
+		font-size: 45px;
+
+	}
+	b{
+		color: black;
+		font-size: 50px;
+		border: 4px green;
+		box-shadow: 2px 5px 10px 1px blue;
+		text-shadow: 2px 3px 4px yellow;
+		border-radius: 45px;
+	}
+	b:hover{
+		border-radius: 50px;
+		background-color: pink;
+
+
+	}
+</style>
+<body bgcolor="redblue">
+	<center><b>Form Validation..</b></center>
+	
+	<form action="frm.html" onsubmit="return mydata()" onresize="40">
+		<marquee><center><h2>Welcome to my website.. in form login</h2></center></marquee>
+		<table border="2" align="center">
+			<th colspan="2">Form..</th>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" id="nm" value="" size="20"></td>
+		</tr>
+		
+		<tr>
+			<td>Password</td>
+			<td><input type="password" id="pass" value="" size="20"></td>
+		</tr>
+		<tr>
+			<td>Phone</td>
+			<td><input type="text" id="number" value="" size="20"></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" id="add" value="" size="20"></td>
+		</tr>
+		<tr>
+			<td>Date</td>
+			<td><input type="date" id="date" value="" size="20"></td>
+		</tr>
+		
+		<tr>
+			<td>Email</td>
+			<td><input type="email" id="email" value="" size="20"></td>
+		</tr>
+		
+		<tr>
+			<td><input type="submit" name="submit" value="submit" onclick="mydata()"></td>
+		</tr>
+		<tr>
+			<td><input type="reset" name="reset" value="reset"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+<hr>
+<center><h2>Form submitt in Document..</h2>
+	<hr>
+<b>1:Name.2:Password.3:Phone.4:Address.5:Date.6:Email</b>
+</center>
